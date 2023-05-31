@@ -23,6 +23,7 @@ const notiSlice = createSlice({
     //         state.message =  'Todo added successfully';
     //     });
     // },
+
     extraReducers: {
         [actions.addTodo]: (state, action) => {
             state.message = 'Todo added successfully';
