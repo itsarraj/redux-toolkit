@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { ADD_NOTE, DELETE_NOTE } from '../actions/noteActions';
+// import { ADD_NOTE, DELETE_NOTE } from '../actions/noteActions';
 
 const initialState = {
     notes: [
@@ -15,18 +15,17 @@ const initialState = {
 };
 
 const noteSlice = createSlice({
-    name: 'notes',
+    name: 'note',
     initialState,
     reducers: {
-        addTodo: (state, action) => {
+        addNote: (state, action) => {
             state.notes.push({
                 text: action.payload,
                 createdOn: new Date(),
             });
         },
-        deleteTodo: (state, action) => {
+        deleteNote: (state, action) => {
             state.notes.splice(action.payload, 1);
-            return notes;
         },
     },
 });
@@ -34,6 +33,9 @@ const noteSlice = createSlice({
 export const noteReducer = noteSlice.reducer;
 
 export const actions = noteSlice.actions;
+
+// Selector
+export const noteSelector = (state) => state.noteReducer.notes;
 
 // export function noteReducer(state=initialState, action){
 //     switch(action.type){

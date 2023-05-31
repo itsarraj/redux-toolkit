@@ -10,7 +10,7 @@ const initialState = {
 // Creating Reducer using Redux Toolkit
 
 const todoSlice = createSlice({
-    name: 'todos',
+    name: 'todo',
     initialState,
     reducers: {
         addTodo: (state, action) => {
@@ -30,6 +30,9 @@ const todoSlice = createSlice({
 export const todoReducer = todoSlice.reducer;
 
 export const actions = todoSlice.actions;
+
+// Selector
+export const todoSelector = (state) => state.todoReducer.todos;
 
 // export function todoReducer(state = initialState, action) {
 //     switch (action.type) {
