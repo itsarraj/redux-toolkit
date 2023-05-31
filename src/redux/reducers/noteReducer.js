@@ -33,6 +33,8 @@ const noteSlice = createSlice({
 
 export const noteReducer = noteSlice.reducer;
 
+export const actions = noteSlice.actions;
+
 // export function noteReducer(state=initialState, action){
 //     switch(action.type){
 //         case ADD_NOTE:
