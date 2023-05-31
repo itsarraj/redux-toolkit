@@ -18,10 +18,15 @@ const notiSlice = createSlice({
     //     },
     // },
 
-    extraReducers: (builder) => {
-        builder.addCase(actions.addTodo, (state, action) => {
+    // extraReducers: (builder) => {
+    //     builder.addCase(actions.addTodo, (state, action) => {
+    //         state.message =  'Todo added successfully';
+    //     });
+    // },
+    extraReducers: {
+        [actions.addTodo]: (state, action) => {
             state.message = 'Todo added successfully';
-        });
+        },
     },
 });
 
