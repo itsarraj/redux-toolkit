@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-
 const initialState = {
     todos: [
         { text: 'Go to Gym at 6', completed: false },
