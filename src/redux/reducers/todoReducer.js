@@ -27,6 +27,8 @@ const todoSlice = createSlice({
     },
 });
 
+export const todoReducer = todoSlice.reducer;
+
 // export function todoReducer(state = initialState, action) {
 //     switch (action.type) {
 //         case ADD_TODO:
